@@ -178,7 +178,7 @@ const Contact = () => {
               </p>
 
               <p className="mt-2 break-all text-sm font-bold text-[#071A2F]">
-                info@arkancargo.com
+                timwangondu@gmail.com
               </p>
 
               <p className="mt-1 text-xs text-slate-400">
