@@ -39,12 +39,12 @@ const Navbar = () => {
           <Link
             to="/"
             onClick={closeMobileMenu}
-            className="flex items-center"
+            className="flex items-center rounded-xl bg-white p-2 shadow-lg"
           >
             <img
               src={logo}
               alt="Arkan Trade Cargo & Freight Ltd"
-              className="h-16 w-auto object-contain lg:h-20"
+              className="h-20 w-auto object-contain lg:h-28"
             />
           </Link>
 
