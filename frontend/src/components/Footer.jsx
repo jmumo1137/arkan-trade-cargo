@@ -352,43 +352,96 @@ const Footer = () => {
 
 
       {/* =====================================================
-          BOTTOM BAR
-      ====================================================== */}
+    SIGNATURE / BOTTOM BAR
+====================================================== */}
 
-      <div className="border-t border-white/10">
-  <div className="arkan-container flex flex-col gap-5 py-6 sm:flex-row sm:items-center sm:justify-between">
+<div className="border-t border-white/[0.08] bg-[#030D19]">
 
-    {/* Copyright */}
-    <div className="flex flex-col gap-1">
-      <p className="text-xs text-white/40">
-        © {new Date().getFullYear()} Arkan Trade Cargo & Freight Solutions.
-      </p>
+  <div className="arkan-container">
 
-      <p className="text-[11px] text-white/20">
-        Connecting Kenya to the World.
-      </p>
+    <div className="flex flex-col gap-5 py-5 sm:flex-row sm:items-center sm:justify-between">
+
+      {/* =================================================
+          BRAND / COPYRIGHT
+      ================================================== */}
+
+      <div className="flex items-center gap-3">
+
+        <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-white/70">
+          Arkan
+        </span>
+
+        <span className="h-3 w-px bg-white/15" />
+
+        <span className="text-[11px] tracking-wide text-white/30">
+          © {new Date().getFullYear()} All rights reserved.
+        </span>
+
+      </div>
+
+
+      {/* =================================================
+          GLOBAL CONNECTION
+      ================================================== */}
+
+      <div className="hidden items-center gap-3 md:flex">
+
+        <span className="h-1.5 w-1.5 rounded-full bg-[#C9A227] shadow-[0_0_8px_rgba(201,162,39,0.6)]" />
+
+        <span className="text-[10px] font-bold uppercase tracking-[0.28em] text-white/35">
+          Kenya
+        </span>
+
+        <span className="text-[#C9A227]/60">
+          →
+        </span>
+
+        <span className="text-[10px] font-bold uppercase tracking-[0.28em] text-white/35">
+          The World
+        </span>
+
+      </div>
+
+
+      {/* =================================================
+          LINKS
+      ================================================== */}
+
+      <div className="flex items-center gap-5">
+
+        <Link
+          to="/faq"
+          className="text-[11px] font-medium tracking-wide text-white/35 transition-all duration-300 hover:text-[#D4AF37]"
+        >
+          FAQs
+        </Link>
+
+        <span className="h-3 w-px bg-white/10" />
+
+        <Link
+          to="/contact"
+          className="text-[11px] font-medium tracking-wide text-white/35 transition-all duration-300 hover:text-[#D4AF37]"
+        >
+          Contact
+        </Link>
+
+      </div>
+
     </div>
 
-    {/* Footer Links */}
-    <div className="flex items-center gap-6">
-      <Link
-        to="/faq"
-        className="group relative text-xs font-medium text-white/40 transition-colors duration-300 hover:text-white"
-      >
-        FAQs
-        <span className="absolute -bottom-1 left-0 h-px w-0 bg-[#c9a227] transition-all duration-300 group-hover:w-full" />
-      </Link>
 
-      <Link
-        to="/contact"
-        className="group relative text-xs font-medium text-white/40 transition-colors duration-300 hover:text-white"
-      >
-        Contact
-        <span className="absolute -bottom-1 left-0 h-px w-0 bg-[#c9a227] transition-all duration-300 group-hover:w-full" />
-      </Link>
+    {/* =================================================
+        GOLD SIGNATURE LINE
+    ================================================== */}
+
+    <div className="relative h-px w-full overflow-hidden bg-white/[0.04]">
+
+      <div className="absolute left-0 top-0 h-px w-24 bg-gradient-to-r from-transparent via-[#C9A227] to-transparent" />
+
     </div>
 
   </div>
+
 </div>
 
     </footer>
