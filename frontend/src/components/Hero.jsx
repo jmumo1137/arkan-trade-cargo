@@ -8,8 +8,11 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[760px] overflow-hidden bg-[#04111F]">
-      {/* BACKGROUND IMAGE */}
+    <section className="relative overflow-hidden bg-[#04111F]">
+
+      {/* =====================================================
+          BACKGROUND IMAGE
+      ===================================================== */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
@@ -18,16 +21,55 @@ const Hero = () => {
         }}
       />
 
-      {/* OVERLAYS */}
+      {/* =====================================================
+          OVERLAYS
+      ===================================================== */}
       <div className="absolute inset-0 bg-[#04111F]/80" />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#04111F]/70 via-[#071A2F]/60 to-[#04111F]/95" />
 
-      {/* CONTENT */}
-      <div className="relative z-10 flex min-h-[760px] items-center justify-center">
-        <div className="arkan-container">
-          <div className="mx-auto max-w-6xl pt-24 text-center">
-            {/* EYEBROW */}
+      <div
+        className="
+          absolute
+          inset-0
+          bg-gradient-to-b
+          from-[#04111F]/70
+          via-[#071A2F]/60
+          to-[#04111F]/95
+        "
+      />
+
+
+      {/* =====================================================
+          HERO CONTENT
+      ===================================================== */}
+      <div
+        className="
+          relative
+          z-10
+          flex
+          min-h-[760px]
+          items-center
+          px-4
+          pb-16
+          pt-36
+          sm:px-6
+          sm:pb-20
+          sm:pt-40
+          lg:min-h-[820px]
+          lg:px-8
+          lg:pb-24
+          lg:pt-44
+        "
+      >
+
+        <div className="arkan-container w-full">
+
+          <div className="mx-auto max-w-6xl text-center">
+
+            {/* =================================================
+                EYEBROW
+            ================================================= */}
             <div className="mb-6 flex items-center justify-center gap-3">
+
               <span className="h-px w-10 bg-[#C9A227]" />
 
               <span className="text-sm font-semibold uppercase tracking-[0.25em] text-[#D4AF37]">
@@ -35,15 +77,38 @@ const Hero = () => {
               </span>
 
               <span className="h-px w-10 bg-[#C9A227]" />
+
             </div>
 
-            {/* SPEED BADGE */}
-            <div className="mb-8 inline-flex items-center rounded-full border border-[#D4AF37]/30 bg-[#D4AF37]/10 px-5 py-2 text-sm font-medium text-[#D4AF37]">
+
+            {/* =================================================
+                SPEED BADGE
+            ================================================= */}
+            <div
+              className="
+                mb-8
+                inline-flex
+                items-center
+                rounded-full
+                border
+                border-[#D4AF37]/30
+                bg-[#D4AF37]/10
+                px-5
+                py-2
+                text-sm
+                font-medium
+                text-[#D4AF37]
+              "
+            >
               ✈ Fast International Cargo Movement
             </div>
 
-            {/* COMPANY NAME */}
+
+            {/* =================================================
+                COMPANY NAME
+            ================================================= */}
             <div className="mb-4">
+
               <p className="text-base font-semibold uppercase tracking-[0.45em] text-white/80">
                 ARKAN
               </p>
@@ -51,18 +116,47 @@ const Hero = () => {
               <p className="mt-2 text-sm uppercase tracking-[0.2em] text-[#D4AF37]">
                 Trade Cargo & Freight Solutions
               </p>
+
             </div>
 
-            {/* MAIN HEADING */}
-            <h1 className="text-5xl font-bold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl xl:text-8xl">
+
+            {/* =================================================
+                MAIN HEADING
+            ================================================= */}
+            <h1
+              className="
+                text-5xl
+                font-bold
+                leading-[1.05]
+                tracking-tight
+                text-white
+                sm:text-6xl
+                lg:text-7xl
+                xl:text-8xl
+              "
+            >
               Air Cargo &
+
               <span className="block text-[#D4AF37]">
                 Agricultural Exports
               </span>
             </h1>
 
-            {/* DESCRIPTION */}
-            <p className="mx-auto mt-8 max-w-3xl text-base leading-8 text-white/80 sm:text-lg">
+
+            {/* =================================================
+                DESCRIPTION
+            ================================================= */}
+            <p
+              className="
+                mx-auto
+                mt-8
+                max-w-3xl
+                text-base
+                leading-8
+                text-white/80
+                sm:text-lg
+              "
+            >
               Specialists in fresh chilled meat exports, flowers,
               herbs, vegetables, pets and general cargo. We provide
               fast, reliable air freight solutions connecting Kenya
@@ -70,8 +164,12 @@ const Hero = () => {
               professionalism.
             </p>
 
-            {/* ACTION BUTTONS */}
+
+            {/* =================================================
+                ACTION BUTTONS
+            ================================================= */}
             <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+
               <Link
                 to="/quote"
                 className="arkan-button-primary"
@@ -86,33 +184,57 @@ const Hero = () => {
               >
                 Explore Our Services
               </Link>
+
             </div>
 
-            {/* TRUST INDICATORS */}
-            <div className="mx-auto mt-16 flex max-w-4xl flex-wrap justify-center gap-x-12 gap-y-8 border-t border-white/15 pt-8">
+
+            {/* =================================================
+                TRUST INDICATORS
+            ================================================= */}
+            <div
+              className="
+                mx-auto
+                mt-14
+                flex
+                max-w-4xl
+                flex-wrap
+                justify-center
+                gap-x-12
+                gap-y-8
+                border-t
+                border-white/15
+                pt-8
+                lg:mt-16
+              "
+            >
+
               {/* AIR CARGO */}
               <div className="flex items-center gap-3 text-left">
+
                 <Plane
                   size={22}
-                  className="text-[#C9A227]"
+                  className="shrink-0 text-[#C9A227]"
                 />
 
                 <div>
                   <p className="text-[10px] uppercase tracking-widest text-white/40">
-                    Speciality
+                    Specialty
                   </p>
 
                   <p className="text-sm font-semibold text-white">
                     Air Cargo Solutions
                   </p>
                 </div>
+
               </div>
+
 
               {/* MEAT EXPORT */}
               <div className="flex items-center gap-3 text-left">
+
                 <Package
                   size={22}
-                  className="text-[#C9A227]"
+                  className="shrink-0 text-[#C9A227]"
                 />
 
                 <div>
@@ -124,13 +246,16 @@ const Hero = () => {
                     Chilled Meat Exports
                   </p>
                 </div>
+
               </div>
+
 
               {/* GLOBAL MARKETS */}
               <div className="flex items-center gap-3 text-left">
+
                 <Globe2
                   size={22}
-                  className="text-[#C9A227]"
+                  className="shrink-0 text-[#C9A227]"
                 />
 
                 <div>
@@ -142,16 +267,26 @@ const Hero = () => {
                     Global Export Markets
                   </p>
                 </div>
+
               </div>
+
             </div>
+
           </div>
+
         </div>
+
       </div>
 
-      {/* BOTTOM ACCENT */}
+
+      {/* =====================================================
+          BOTTOM ACCENT
+      ===================================================== */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#C9A227]" />
+
     </section>
   );
 };
 
 export default Hero;
+

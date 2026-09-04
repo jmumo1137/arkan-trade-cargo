@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Menu,
   X,
@@ -11,10 +11,23 @@ import logo from "../assets/logo.png";
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const closeMobileMenu = () => {
     setMobileOpen(false);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 40);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const navLinks = [
     { label: "Home", path: "/" },
@@ -26,13 +39,41 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="absolute left-0 right-0 top-0 z-50">
+    <header
+      className={`
+        fixed
+        left-0
+        right-0
+        top-0
+        z-50
+        transition-all
+        duration-300
+        ${
+          scrolled
+            ? "bg-[#071A2F]/95 shadow-lg backdrop-blur-md"
+            : "bg-transparent"
+        }
+      `}
+    >
       <div className="arkan-container">
 
         {/* =====================================================
             NAVBAR
         ===================================================== */}
-        <nav className="flex h-24 items-center justify-between lg:h-28">
+        <nav
+          className={`
+            flex
+            items-center
+            justify-between
+            transition-all
+            duration-300
+            ${
+              scrolled
+                ? "h-20"
+                : "h-24 lg:h-28"
+            }
+          `}
+        >
 
           {/* =====================================================
               LOGO
@@ -45,7 +86,17 @@ const Navbar = () => {
             <img
               src={logo}
               alt="Arkan Trade Cargo & Freight Ltd"
-              className="h-16 w-auto object-contain lg:h-20"
+              className={`
+                w-auto
+                object-contain
+                transition-all
+                duration-300
+                ${
+                  scrolled
+                    ? "h-14 lg:h-16"
+                    : "h-16 lg:h-20"
+                }
+              `}
             />
           </Link>
 
@@ -80,7 +131,6 @@ const Navbar = () => {
           ===================================================== */}
           <div className="hidden items-center gap-6 lg:flex">
 
-            {/* Phone */}
             <a
               href="tel:+254714031701"
               className="
@@ -106,7 +156,6 @@ const Navbar = () => {
             </a>
 
 
-            {/* Quote CTA */}
             <Link
               to="/quote"
               className="
@@ -210,7 +259,6 @@ const Navbar = () => {
               ))}
 
 
-              {/* Mobile Quote Button */}
               <Link
                 to="/quote"
                 onClick={closeMobileMenu}
