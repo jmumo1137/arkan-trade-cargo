@@ -355,7 +355,7 @@ const Footer = () => {
           BOTTOM BAR
       ====================================================== */}
 
-<div className="border-t border-white/10">
+      <div className="border-t border-white/10">
   <div className="arkan-container flex flex-col gap-5 py-6 sm:flex-row sm:items-center sm:justify-between">
 
     {/* Copyright */}
