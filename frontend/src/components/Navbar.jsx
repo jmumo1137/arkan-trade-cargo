@@ -30,28 +30,50 @@ const Navbar = () => {
     <header className="absolute left-0 right-0 top-0 z-50">
       <div className="arkan-container">
 
-        <nav className=" flex h-28 items-center justify-between">
+        {/* =====================================================
+            NAVBAR
+        ====================================================== */}
+        <nav className="flex h-28 items-center justify-between">
 
-          {/* ==========================================
+          {/* =====================================================
               LOGO
-          ========================================== */}
-
+          ====================================================== */}
           <Link
             to="/"
             onClick={closeMobileMenu}
-            className="flex items-center rounded-xl bg-white p-2 shadow-lg"
+            className="
+              relative
+              z-20
+              flex
+              items-center
+              rounded-xl
+              bg-white
+              px-3
+              py-2
+              shadow-lg
+              overflow-visible
+            "
           >
             <img
               src={logo}
               alt="Arkan Trade Cargo & Freight Ltd"
-              className="h-20 w-auto object-contain lg:h-28"
+              className="
+                h-20
+                w-auto
+                origin-left
+                scale-110
+                object-contain
+                transition-transform
+                duration-300
+                lg:h-24
+                lg:scale-125
+              "
             />
           </Link>
 
-          {/* ==========================================
+          {/* =====================================================
               DESKTOP NAVIGATION
-          ========================================== */}
-
+          ====================================================== */}
           <div className="hidden items-center gap-8 lg:flex">
 
             {navLinks.map((item) => (
@@ -71,6 +93,7 @@ const Navbar = () => {
               </Link>
             ))}
 
+            {/* Solutions */}
             <Link
               to="/services"
               className="
@@ -91,12 +114,12 @@ const Navbar = () => {
 
           </div>
 
-          {/* ==========================================
-              DESKTOP CTA
-          ========================================== */}
-
+          {/* =====================================================
+              DESKTOP CONTACT + CTA
+          ====================================================== */}
           <div className="hidden items-center gap-6 lg:flex">
 
+            {/* Phone */}
             <a
               href="tel:+254714031701"
               className="
@@ -116,9 +139,9 @@ const Navbar = () => {
               />
 
               <span>+254 714 031 701</span>
-
             </a>
 
+            {/* Quote Button */}
             <Link
               to="/quote"
               className="
@@ -141,18 +164,17 @@ const Navbar = () => {
               Request a Quote
 
               <ArrowRight size={16} />
-
             </Link>
 
           </div>
 
-          {/* ==========================================
+          {/* =====================================================
               MOBILE MENU BUTTON
-          ========================================== */}
-
+          ====================================================== */}
           <button
             type="button"
             aria-label="Toggle navigation"
+            aria-expanded={mobileOpen}
             onClick={() => setMobileOpen(!mobileOpen)}
             className="
               rounded-lg
@@ -172,14 +194,14 @@ const Navbar = () => {
 
         </nav>
 
-
-        {/* ==========================================
+        {/* =====================================================
             MOBILE MENU
-        ========================================== */}
-
+        ====================================================== */}
         {mobileOpen && (
           <div
             className="
+              relative
+              z-30
               rounded-2xl
               border
               border-white/10
@@ -192,6 +214,7 @@ const Navbar = () => {
 
             <div className="flex flex-col">
 
+              {/* Mobile Navigation Links */}
               {navLinks.map((item) => (
                 <Link
                   key={item.path}
@@ -205,6 +228,7 @@ const Navbar = () => {
                     font-medium
                     text-white/80
                     transition
+                    duration-300
                     hover:bg-white/5
                     hover:text-[#C9A227]
                   "
@@ -213,6 +237,38 @@ const Navbar = () => {
                 </Link>
               ))}
 
+              {/* Mobile Phone */}
+              <a
+                href="tel:+254714031701"
+                onClick={closeMobileMenu}
+                className="
+                  mt-3
+                  flex
+                  items-center
+                  justify-center
+                  gap-2
+                  rounded-lg
+                  border
+                  border-white/10
+                  px-4
+                  py-3
+                  text-sm
+                  font-medium
+                  text-white/80
+                  transition
+                  hover:border-[#C9A227]/40
+                  hover:text-[#C9A227]
+                "
+              >
+                <Phone
+                  size={15}
+                  className="text-[#C9A227]"
+                />
+
+                +254 714 031 701
+              </a>
+
+              {/* Mobile Quote Button */}
               <Link
                 to="/quote"
                 onClick={closeMobileMenu}
@@ -229,12 +285,14 @@ const Navbar = () => {
                   text-sm
                   font-bold
                   text-[#071A2F]
+                  transition-all
+                  duration-300
+                  hover:bg-[#D8B24A]
                 "
               >
                 Request a Quote
 
                 <ArrowRight size={16} />
-
               </Link>
 
             </div>
