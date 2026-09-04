@@ -355,37 +355,41 @@ const Footer = () => {
           BOTTOM BAR
       ====================================================== */}
 
-      <div className="border-t border-white/10">
+<div className="border-t border-white/10">
+  <div className="arkan-container flex flex-col gap-5 py-6 sm:flex-row sm:items-center sm:justify-between">
 
-        <div className="arkan-container flex flex-col justify-between gap-4 py-6 sm:flex-row sm:items-center">
+    {/* Copyright */}
+    <div className="flex flex-col gap-1">
+      <p className="text-xs text-white/40">
+        © {new Date().getFullYear()} Arkan Trade Cargo & Freight Solutions.
+      </p>
 
-          <p className="text-xs leading-5 text-white/30">
-            © {new Date().getFullYear()} Arkan Trade Cargo & Freight
-            Solutions. All rights reserved.
-          </p>
+      <p className="text-[11px] text-white/20">
+        Connecting Kenya to the World.
+      </p>
+    </div>
 
+    {/* Footer Links */}
+    <div className="flex items-center gap-6">
+      <Link
+        to="/faq"
+        className="group relative text-xs font-medium text-white/40 transition-colors duration-300 hover:text-white"
+      >
+        FAQs
+        <span className="absolute -bottom-1 left-0 h-px w-0 bg-[#c9a227] transition-all duration-300 group-hover:w-full" />
+      </Link>
 
-          <div className="flex items-center gap-6">
+      <Link
+        to="/contact"
+        className="group relative text-xs font-medium text-white/40 transition-colors duration-300 hover:text-white"
+      >
+        Contact
+        <span className="absolute -bottom-1 left-0 h-px w-0 bg-[#c9a227] transition-all duration-300 group-hover:w-full" />
+      </Link>
+    </div>
 
-            <Link
-              to="/faq"
-              className="text-xs text-white/30 transition-colors hover:text-white/70"
-            >
-              FAQs
-            </Link>
-
-            <Link
-              to="/contact"
-              className="text-xs text-white/30 transition-colors hover:text-white/70"
-            >
-              Contact
-            </Link>
-
-          </div>
-
-        </div>
-
-      </div>
+  </div>
+</div>
 
     </footer>
   );
