@@ -1,4 +1,3 @@
-```jsx
 import {
   ArrowRight,
   ArrowUpRight,
@@ -24,6 +23,7 @@ const Blog = () => {
       date: "August 2026",
       readTime: "5 min read",
       icon: Plane,
+      slug: "/blog/air-freight-time-sensitive-cargo",
     },
     {
       category: "Fresh Meat",
@@ -33,6 +33,7 @@ const Blog = () => {
       date: "August 2026",
       readTime: "6 min read",
       icon: Snowflake,
+      slug: "/blog/fresh-chilled-meat-kenya",
     },
     {
       category: "Flowers",
@@ -42,6 +43,7 @@ const Blog = () => {
       date: "August 2026",
       readTime: "5 min read",
       icon: Flower2,
+      slug: "/blog/kenyan-flowers-air-cargo",
     },
     {
       category: "Agricultural Exports",
@@ -51,6 +53,7 @@ const Blog = () => {
       date: "July 2026",
       readTime: "5 min read",
       icon: Leaf,
+      slug: "/blog/herbs-vegetables-global-buyers",
     },
     {
       category: "Pets",
@@ -60,6 +63,7 @@ const Blog = () => {
       date: "July 2026",
       readTime: "6 min read",
       icon: PawPrint,
+      slug: "/blog/international-pet-transport",
     },
     {
       category: "Customs",
@@ -69,6 +73,7 @@ const Blog = () => {
       date: "June 2026",
       readTime: "4 min read",
       icon: PackageCheck,
+      slug: "/blog/cargo-documentation",
     },
   ];
 
@@ -80,7 +85,7 @@ const Blog = () => {
       ===================================================== */}
       <section className="relative min-h-[600px] overflow-hidden bg-[#04111F]">
 
-        {/* Background image */}
+        {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -94,6 +99,7 @@ const Blog = () => {
 
         <div className="absolute inset-0 bg-gradient-to-r from-[#04111F]/95 via-[#071A2F]/75 to-[#04111F]/45" />
 
+        {/* Hero Content */}
         <div className="relative z-10 arkan-container">
 
           <div className="flex min-h-[600px] items-center py-28">
@@ -111,17 +117,13 @@ const Blog = () => {
 
               </div>
 
-
               {/* Heading */}
               <h1 className="text-5xl font-bold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">
-
                 Knowledge that
                 <span className="block text-[#D4AF37]">
                   keeps cargo moving.
                 </span>
-
               </h1>
-
 
               {/* Description */}
               <p className="mt-7 max-w-2xl text-base leading-8 text-white/70 sm:text-lg">
@@ -130,8 +132,7 @@ const Blog = () => {
                 behind moving goods from Kenya to the world.
               </p>
 
-
-              {/* Focus indicators */}
+              {/* Focus Indicators */}
               <div className="mt-10 flex flex-wrap gap-3">
 
                 {[
@@ -156,8 +157,7 @@ const Blog = () => {
 
         </div>
 
-
-        {/* Gold accent */}
+        {/* Gold Accent */}
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#C9A227]" />
 
       </section>
@@ -218,11 +218,9 @@ const Blog = () => {
 
               </div>
 
-
               <h2 className="mt-6 max-w-xl text-3xl font-bold leading-tight text-white sm:text-4xl">
                 Why air freight matters when your cargo needs to move fast
               </h2>
-
 
               <p className="mt-5 max-w-xl text-sm leading-7 text-white/55 sm:text-base">
                 For fresh produce, chilled meat, flowers and other
@@ -232,7 +230,7 @@ const Blog = () => {
                 reach international markets efficiently.
               </p>
 
-
+              {/* Meta */}
               <div className="mt-7 flex flex-wrap items-center gap-5 text-xs text-white/40">
 
                 <span className="flex items-center gap-2">
@@ -247,9 +245,9 @@ const Blog = () => {
 
               </div>
 
-
+              {/* Correct Article Link */}
               <Link
-                to="/contact"
+                to="/blog/air-freight-time-sensitive-cargo"
                 className="mt-8 inline-flex w-fit items-center gap-2 text-sm font-bold text-[#D4AF37] transition-colors hover:text-white"
               >
                 Read the insight
@@ -270,7 +268,7 @@ const Blog = () => {
       ===================================================== */}
       <section className="arkan-container pb-20 sm:pb-24 lg:pb-28">
 
-        {/* Section heading */}
+        {/* Section Heading */}
         <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
 
           <div className="max-w-3xl">
@@ -286,16 +284,13 @@ const Blog = () => {
             </div>
 
             <h2 className="text-4xl font-bold leading-[1.1] text-[#071A2F] sm:text-5xl">
-
               Insights for
               <span className="text-[#C9A227]">
                 {" "}better cargo movement.
               </span>
-
             </h2>
 
           </div>
-
 
           <p className="max-w-md text-sm leading-7 text-slate-500 lg:text-right">
             Explore practical information about air cargo,
@@ -315,18 +310,17 @@ const Blog = () => {
 
             return (
               <article
-                key={article.title}
+                key={article.slug}
                 className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white transition-all duration-500 hover:-translate-y-2 hover:border-[#C9A227]/50 hover:shadow-xl"
               >
 
-                {/* Card visual */}
+                {/* Card Visual */}
                 <div className="relative flex h-52 items-center justify-center overflow-hidden bg-[#071A2F]">
 
-                  {/* Decorative circles */}
+                  {/* Decorative Circle */}
                   <div className="absolute -right-10 -top-10 h-36 w-36 rounded-full border border-[#C9A227]/15 transition-transform duration-700 group-hover:scale-125" />
 
                   <div className="absolute -bottom-16 -left-10 h-40 w-40 rounded-full border border-white/5" />
-
 
                   {/* Icon */}
                   <div className="relative flex h-16 w-16 items-center justify-center rounded-full border border-[#C9A227]/25 bg-[#C9A227]/10 transition-all duration-500 group-hover:scale-110 group-hover:bg-[#C9A227]">
@@ -339,7 +333,6 @@ const Blog = () => {
 
                   </div>
 
-
                   {/* Category */}
                   <span className="absolute bottom-5 left-6 text-[10px] font-bold uppercase tracking-[0.25em] text-[#C9A227]">
                     {article.category}
@@ -348,9 +341,10 @@ const Blog = () => {
                 </div>
 
 
-                {/* Card content */}
+                {/* Card Content */}
                 <div className="flex flex-1 flex-col p-7">
 
+                  {/* Meta */}
                   <div className="flex flex-wrap items-center gap-4 text-[10px] font-medium uppercase tracking-wider text-slate-400">
 
                     <span className="flex items-center gap-1.5">
@@ -366,18 +360,21 @@ const Blog = () => {
                   </div>
 
 
+                  {/* Title */}
                   <h3 className="mt-5 text-xl font-bold leading-tight text-[#071A2F] transition-colors duration-300 group-hover:text-[#C9A227]">
                     {article.title}
                   </h3>
 
 
+                  {/* Excerpt */}
                   <p className="mt-4 flex-1 text-sm leading-7 text-slate-500">
                     {article.excerpt}
                   </p>
 
 
+                  {/* Correct Dynamic Article Link */}
                   <Link
-                    to="/contact"
+                    to={article.slug}
                     className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-[#071A2F] transition-colors hover:text-[#C9A227]"
                   >
                     Read more
@@ -432,6 +429,7 @@ const Blog = () => {
             </div>
 
 
+            {/* Quote Link */}
             <Link
               to="/quote"
               className="inline-flex shrink-0 items-center gap-3 rounded-full bg-[#071A2F] px-8 py-4 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#04111F]"
@@ -439,9 +437,7 @@ const Blog = () => {
               Request a Quote
 
               <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#C9A227] text-[#071A2F]">
-
                 <ArrowRight size={15} />
-
               </span>
 
             </Link>
@@ -457,4 +453,4 @@ const Blog = () => {
 };
 
 export default Blog;
-```
+
