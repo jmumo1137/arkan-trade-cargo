@@ -356,17 +356,12 @@ const Footer = () => {
 ====================================================== */}
 
 <div className="border-t border-white/[0.08] bg-[#030D19]">
-
   <div className="arkan-container">
 
-    <div className="flex flex-col gap-5 py-5 sm:flex-row sm:items-center sm:justify-between">
+    <div className="flex flex-col items-center justify-center gap-4 py-6 text-center">
 
-      {/* =================================================
-          BRAND / COPYRIGHT
-      ================================================== */}
-
-      <div className="flex items-center gap-3">
-
+      {/* Copyright */}
+      <div className="flex flex-wrap items-center justify-center gap-3">
         <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-white/70">
           Arkan
         </span>
@@ -376,17 +371,11 @@ const Footer = () => {
         <span className="text-[11px] tracking-wide text-white/30">
           © {new Date().getFullYear()} All rights reserved.
         </span>
-
       </div>
 
-
-      {/* =================================================
-          GLOBAL CONNECTION
-      ================================================== */}
-
-      <div className="hidden items-center gap-3 md:flex">
-
-        <span className="h-1.5 w-1.5 rounded-full bg-[#C9A227] shadow-[0_0_8px_rgba(201,162,39,0.6)]" />
+      {/* Global Connection */}
+      <div className="flex items-center justify-center gap-3">
+        <span className="h-1.5 w-1.5 rounded-full bg-[#C9A227]" />
 
         <span className="text-[10px] font-bold uppercase tracking-[0.28em] text-white/35">
           Kenya
@@ -399,19 +388,13 @@ const Footer = () => {
         <span className="text-[10px] font-bold uppercase tracking-[0.28em] text-white/35">
           The World
         </span>
-
       </div>
 
-
-      {/* =================================================
-          LINKS
-      ================================================== */}
-
-      <div className="flex items-center gap-5">
-
+      {/* Links */}
+      <div className="flex items-center justify-center gap-5">
         <Link
           to="/faq"
-          className="text-[11px] font-medium tracking-wide text-white/35 transition-all duration-300 hover:text-[#D4AF37]"
+          className="text-[11px] font-medium tracking-wide text-white/35 transition-colors duration-300 hover:text-[#D4AF37]"
         >
           FAQs
         </Link>
@@ -420,28 +403,18 @@ const Footer = () => {
 
         <Link
           to="/contact"
-          className="text-[11px] font-medium tracking-wide text-white/35 transition-all duration-300 hover:text-[#D4AF37]"
+          className="text-[11px] font-medium tracking-wide text-white/35 transition-colors duration-300 hover:text-[#D4AF37]"
         >
           Contact
         </Link>
-
       </div>
 
     </div>
 
-
-    {/* =================================================
-        GOLD SIGNATURE LINE
-    ================================================== */}
-
-    <div className="relative h-px w-full overflow-hidden bg-white/[0.04]">
-
-      <div className="absolute left-0 top-0 h-px w-24 bg-gradient-to-r from-transparent via-[#C9A227] to-transparent" />
-
-    </div>
+    {/* Gold signature line */}
+    <div className="mx-auto h-px w-24 bg-[#C9A227]/50" />
 
   </div>
-
 </div>
 
     </footer>
