@@ -322,7 +322,7 @@ const Footer = () => {
                   </p>
 
                   <a
-                    href="mailto:timwangondu@gmail.com"
+                    href="mailto:arkancargoandfreight@gmail.com"
                     className="mt-1 block break-all text-sm text-white/55 transition-colors hover:text-white"
                   >
                     arkancargoandfreight@gmail.com
