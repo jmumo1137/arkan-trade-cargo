@@ -1,4 +1,4 @@
-import Navbar from "../components/Navbar";
+
 import Hero from "../components/Hero";
 import ServicesSection from "../components/ServicesSection";
 import GlobalConnection from "../components/GlobalConnection";
@@ -9,7 +9,6 @@ import GlobalReach from "../components/GlobalReach";
 const Home = () => {
   return (
     <main>
-      <Navbar />
       <Hero />
       <ServicesSection />
       <GlobalConnection />
