@@ -89,7 +89,7 @@ const Industries = () => {
 
   const benefits = [
     "Industry-focused logistics coordination",
-    "Air, sea, and road freight options",
+    "Air, sea and road freight options",
     "Import and export clearance support",
     "Documentation and compliance coordination",
     "Specialized handling for perishables",
@@ -149,7 +149,7 @@ const Industries = () => {
 
               {/* Description */}
               <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-white/70 sm:text-lg">
-                From fresh produce and flowers to meat, general cargo, and
+                From fresh produce and flowers to meat, general cargo and
                 international trade, we provide logistics solutions designed
                 around the needs of different businesses and industries.
               </p>
@@ -208,7 +208,7 @@ const Industries = () => {
 
             <p className="mt-5 leading-7 text-[#64748B]">
               Cargo requirements can vary significantly depending on the
-              product, destination, timeline, and regulatory requirements.
+              product, destination, timeline and regulatory requirements.
               We work with businesses to coordinate logistics solutions
               suited to their specific cargo and market.
             </p>
