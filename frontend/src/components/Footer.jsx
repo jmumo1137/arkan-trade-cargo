@@ -325,7 +325,7 @@ const Footer = () => {
                     href="mailto:timwangondu@gmail.com"
                     className="mt-1 block break-all text-sm text-white/55 transition-colors hover:text-white"
                   >
-                    timwangondu@gmail.com
+                    arkancargoandfreight@gmail.com
                   </a>
 
                 </div>
