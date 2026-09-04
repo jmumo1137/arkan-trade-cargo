@@ -1,4 +1,4 @@
-```jsx
+
 import {
   ArrowRight,
   ArrowUpRight,
@@ -602,4 +602,3 @@ const Services = () => {
 };
 
 export default Services;
-```
