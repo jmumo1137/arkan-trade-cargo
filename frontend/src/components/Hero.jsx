@@ -14,7 +14,7 @@ const Hero = () => {
         className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage:
-            "url('https://www.pexels.com/photo/a-white-and-blue-airplane-on-airport-11146455/?utm_source=chatgpt.com')",
+            "url('https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?auto=format&fit=crop&w=2200&q=85')",
         }}
       />
 
