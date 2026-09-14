@@ -30,7 +30,7 @@ const Hero = () => {
       {/* =========================================
           HERO CONTENT
       ========================================= */}
-      <div className="relative z-10 flex min-h-[800px] items-center px-4 pt-36 pb-24 sm:px-6 lg:px-8">
+      <div className="relative z-10 flex min-h-[800px] items-center px-4 pt-36 pb-32 sm:px-6 lg:px-8">
 
         <div className="arkan-container w-full">
 
@@ -130,74 +130,76 @@ const Hero = () => {
 
             </div>
 
-            {/* Trust Indicators */}
-            <div className="mx-auto mt-20 max-w-5xl border-t border-white/15 pt-12">
+            {/* =========================================
+    BOTTOM TRUST INDICATORS
+========================================= */}
+<div className="mx-auto mt-20 max-w-5xl">
 
-              <div className="flex flex-wrap justify-center gap-5">
+  <div className="flex flex-wrap items-center justify-center gap-x-16 gap-y-8">
 
-                {/* Card 1 */}
-                <div className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 px-6 py-5 backdrop-blur-md">
+    {/* Air Cargo */}
+    <div className="flex items-center gap-3 text-left">
 
-                  <Plane
-                    size={24}
-                    className="text-[#C9A227]"
-                  />
+      <Plane
+        size={22}
+        className="shrink-0 text-[#C9A227]"
+      />
 
-                  <div className="text-left">
-                    <p className="text-[10px] uppercase tracking-[0.2em] text-white/50">
-                      Specialty
-                    </p>
+      <div>
+        <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-white/45">
+          Specialty
+        </p>
 
-                    <p className="text-sm font-semibold text-white">
-                      Air Cargo Solutions
-                    </p>
-                  </div>
+        <p className="mt-1 text-sm font-semibold text-white">
+          Air Cargo Solutions
+        </p>
+      </div>
 
-                </div>
+    </div>
 
-                {/* Card 2 */}
-                <div className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 px-6 py-5 backdrop-blur-md">
+    {/* Chilled Meat */}
+    <div className="flex items-center gap-3 text-left">
 
-                  <Package
-                    size={24}
-                    className="text-[#C9A227]"
-                  />
+      <Package
+        size={22}
+        className="shrink-0 text-[#C9A227]"
+      />
 
-                  <div className="text-left">
-                    <p className="text-[10px] uppercase tracking-[0.2em] text-white/50">
-                      Export Focus
-                    </p>
+      <div>
+        <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-white/45">
+          Export Focus
+        </p>
 
-                    <p className="text-sm font-semibold text-white">
-                      Chilled Meat Exports
-                    </p>
-                  </div>
+        <p className="mt-1 text-sm font-semibold text-white">
+          Chilled Meat Exports
+        </p>
+      </div>
 
-                </div>
+    </div>
 
-                {/* Card 3 */}
-                <div className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 px-6 py-5 backdrop-blur-md">
+    {/* Global Markets */}
+    <div className="flex items-center gap-3 text-left">
 
-                  <Globe2
-                    size={24}
-                    className="text-[#C9A227]"
-                  />
+      <Globe2
+        size={22}
+        className="shrink-0 text-[#C9A227]"
+      />
 
-                  <div className="text-left">
-                    <p className="text-[10px] uppercase tracking-[0.2em] text-white/50">
-                      Reach
-                    </p>
+      <div>
+        <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-white/45">
+          Reach
+        </p>
 
-                    <p className="text-sm font-semibold text-white">
-                      Global Export Markets
-                    </p>
-                  </div>
+        <p className="mt-1 text-sm font-semibold text-white">
+          Global Export Markets
+        </p>
+      </div>
 
-                </div>
+    </div>
 
-              </div>
+  </div>
 
-            </div>
+</div>
 
           </div>
 
