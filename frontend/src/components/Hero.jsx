@@ -30,7 +30,7 @@ const Hero = () => {
       {/* =========================================
           HERO CONTENT
       ========================================= */}
-      <div className="relative z-10 flex min-h-[800px] items-center px-4 pt-36 pb-32 sm:px-6 lg:px-8">
+      <div className="relative z-10 flex min-h-[800px] items-center px-4 pt-20 pb-32 sm:px-6 lg:px-8">
 
         <div className="arkan-container w-full">
 

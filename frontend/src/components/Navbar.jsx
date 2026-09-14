@@ -70,7 +70,7 @@ const Navbar = () => {
             ${
               scrolled
                 ? "h-20"
-                : "h-24 lg:h-28"
+                : "h-20 lg:h-24"
             }
           `}
         >

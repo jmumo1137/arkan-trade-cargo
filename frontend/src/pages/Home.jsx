@@ -8,7 +8,7 @@ import GlobalReach from "../components/GlobalReach";
 
 const Home = () => {
   return (
-    <main>
+    <main className="pt-20 lg:pt-24">
       <Hero />
       <ServicesSection />
       <GlobalConnection />
