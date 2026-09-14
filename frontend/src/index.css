@@ -87,3 +87,51 @@ a {
 
   color: var(--arkan-gold);
 }
+/* ==================================================
+   BUTTONS
+================================================== */
+
+.arkan-button-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+
+  padding: 1rem 2rem;
+  border-radius: 999px;
+
+  background: var(--arkan-gold);
+  color: var(--arkan-navy-dark);
+
+  font-weight: 700;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.arkan-button-primary:hover {
+  transform: translateY(-2px);
+  background: var(--arkan-gold-light);
+}
+
+.arkan-button-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem 2rem;
+  border-radius: 999px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--arkan-white);
+
+  font-weight: 700;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.arkan-button-outline:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.4);
+}
