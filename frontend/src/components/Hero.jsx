@@ -6,6 +6,19 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 const Hero = () => {
   return (
     <section className="relative overflow-hidden bg-[#04111F]">

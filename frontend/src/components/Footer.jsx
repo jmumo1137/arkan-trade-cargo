@@ -48,17 +48,18 @@ const Footer = () => {
             </div>
 
 
-            <Link
-              to="/quote"
-              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-full bg-[#C9A227] px-6 py-3.5 text-sm font-bold text-[#071A2F] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#D4AF37]"
-            >
-              Request a Quote
+           
+<Link
+  to="/quote"
+  className="group relative inline-flex w-fit shrink-0 items-center gap-3 rounded-full border border-[#C9A227] bg-[#C9A227] px-6 py-3.5 text-sm font-bold text-[#071A2F] transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[#FFE58A] hover:bg-[#071A2F] hover:text-[#FFE58A] hover:shadow-[0_0_8px_#C9A227,0_0_20px_#C9A227,0_0_40px_rgba(201,162,39,0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E3C766] focus-visible:ring-offset-2 focus-visible:ring-offset-[#04111F]"
+>
+  <span>Request a Quote</span>
 
-              <ArrowUpRight
-                size={17}
-                className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-              />
-            </Link>
+  <ArrowRight
+    size={16}
+    className="transition-transform duration-300 group-hover:translate-x-1"
+  />
+</Link>
 
           </div>
 
