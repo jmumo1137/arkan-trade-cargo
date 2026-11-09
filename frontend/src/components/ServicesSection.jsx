@@ -1,156 +1,140 @@
 import {
   ArrowUpRight,
-  Plane,
-  Ship,
-  Truck,
-  FileCheck,
   Package,
-  Warehouse,
+  Plane,
+  ShieldCheck,
+  FileCheck,
+  ThermometerSnowflake,
 } from "lucide-react";
+
 import { Link } from "react-router-dom";
-import { services } from "../data/services";
+
+const supportingServices = [
+  {
+    title: "Air Freight",
+    shortTitle: "International Shipping",
+    description:
+      "Coordinated air cargo solutions for time-sensitive exports and international shipments.",
+    icon: Plane,
+  },
+  {
+    title: "Customs Clearance",
+    shortTitle: "Customs Solutions",
+    description:
+      "Support with customs procedures and clearance requirements for international cargo.",
+    icon: ShieldCheck,
+  },
+  {
+    title: "Export Documentation",
+    shortTitle: "Export Compliance",
+    description:
+      "Assistance with export documentation and shipment paperwork for smooth cargo movement.",
+    icon: FileCheck,
+  },
+  {
+    title: "Perishable Cargo Handling",
+    shortTitle: "Temperature-Sensitive Cargo",
+    description:
+      "Coordinated handling arrangements for fresh meat, flowers and other temperature-sensitive products.",
+    icon: ThermometerSnowflake,
+  },
+];
 
 const ServicesSection = () => {
-
-  /*
-   * Keep Air Freight at the front regardless
-   * of the order inside services.js.
-   */
-  const priority = [
-    "Air Freight",
-    "Sea Freight",
-    "Road Freight",
-    "Customs Clearance",
-    "Export Documentation",
-    "Import Clearance",
-  ];
-
-  const sortedServices = [...services].sort((a, b) => {
-    const aIndex = priority.indexOf(a.title);
-    const bIndex = priority.indexOf(b.title);
-
-    if (aIndex === -1 && bIndex === -1) return 0;
-    if (aIndex === -1) return 1;
-    if (bIndex === -1) return -1;
-
-    return aIndex - bIndex;
-  });
-
   return (
-    <section className="relative bg-white py-24 sm:py-28 lg:py-32">
-
+    <section className="relative bg-white py-20 sm:py-24 lg:py-28">
       <div className="arkan-container">
 
-        {/* =====================================================
-            HEADER
-        ====================================================== */}
-
-        <div className="mb-16 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
-
+        {/* SECTION HEADER */}
+        <div className="mb-14 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl">
-
             <div className="mb-5 flex items-center gap-3">
-
               <span className="h-px w-10 bg-[#C9A227]" />
 
               <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#C9A227]">
                 Our Logistics Solutions
               </span>
-
             </div>
 
             <h2 className="text-4xl font-bold leading-[1.1] tracking-tight text-[#071A2F] sm:text-5xl lg:text-6xl">
-
-              Air cargo first.
+              Meat exports.
               <span className="block text-[#C9A227]">
-                Complete logistics support.
+                Logistics without compromise.
               </span>
-
             </h2>
 
             <p className="mt-6 max-w-2xl text-base leading-8 text-slate-600">
-              Air freight is at the heart of what we do. Around it,
-              Arkan provides the customs, documentation, road, sea
-              and cargo coordination services needed to move your
-              shipment smoothly from origin to destination.
+              Arkan focuses on fresh and chilled meat exports from Kenya
+              to international markets. We coordinate air freight,
+              temperature-conscious cargo handling, export documentation
+              and customs clearance. We also support flowers,
+              horticultural products and general cargo.
             </p>
-
           </div>
-
 
           <Link
             to="/services"
-            className="group inline-flex items-center gap-3 text-sm font-bold text-[#071A2F]"
+            className="group inline-flex w-fit items-center gap-3 text-sm font-bold text-[#071A2F]"
           >
-
             View All Services
 
             <span className="flex h-9 w-9 items-center justify-center rounded-full border border-[#071A2F]/20 transition-all duration-300 group-hover:border-[#C9A227] group-hover:bg-[#C9A227]">
-
               <ArrowUpRight
                 size={16}
                 className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
               />
-
             </span>
-
           </Link>
-
         </div>
 
-
-        {/* =====================================================
-            FEATURED AIR FREIGHT
-        ====================================================== */}
-
-        <div className="mb-6 overflow-hidden rounded-2xl bg-[#071A2F]">
-
+        {/* FEATURED MEAT EXPORT SOLUTION */}
+        <div className="mb-10 overflow-hidden rounded-2xl bg-[#071A2F]">
           <div className="grid lg:grid-cols-2">
 
-            {/* CONTENT */}
+            {/* FEATURED CONTENT */}
             <div className="flex flex-col justify-center p-8 sm:p-10 lg:p-14">
-
               <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#C9A227]/10">
-
-                <Plane
-                  size={27}
+                <Package
+                  size={28}
                   strokeWidth={1.5}
                   className="text-[#D4AF37]"
                 />
-
               </div>
 
               <p className="mt-8 text-xs font-bold uppercase tracking-[0.25em] text-[#D4AF37]">
-                Our Speciality
+                Our Primary Export Focus
               </p>
 
-              <h3 className="mt-3 text-3xl font-bold text-white sm:text-4xl">
-                Air Freight
+              <h3 className="mt-3 text-3xl font-bold leading-tight text-white sm:text-4xl">
+                Fresh & Chilled
+                <span className="block text-[#D4AF37]">
+                  Meat Export Logistics
+                </span>
               </h3>
 
-              <p className="mt-5 max-w-xl text-sm leading-7 text-white/65 sm:text-base">
-                Fast and dependable air cargo solutions for
-                time-sensitive exports including fresh chilled meat,
-                flowers, herbs, vegetables, pets and general cargo.
+              <p className="mt-5 max-w-xl text-sm leading-7 text-white/70 sm:text-base">
+                Supporting meat exporters with coordinated international
+                air freight, temperature-conscious cargo handling,
+                export documentation and customs clearance. We focus
+                on the careful movement of time-sensitive meat shipments
+                from Kenya to global markets.
               </p>
 
               <Link
                 to="/services"
-                className="mt-8 inline-flex w-fit items-center gap-3 rounded-full bg-[#C9A227] px-6 py-3 text-sm font-bold text-[#071A2F] transition-all duration-300 hover:bg-[#D4AF37]"
+                className="group mt-8 inline-flex w-fit items-center gap-3 rounded-full border border-[#C9A227] bg-[#C9A227] px-6 py-3 text-sm font-bold text-[#071A2F] transition-all duration-300 hover:bg-transparent hover:text-[#D4AF37]"
               >
+                Explore Meat Export Solutions
 
-                Explore Air Freight
-
-                <ArrowUpRight size={17} />
-
+                <ArrowUpRight
+                  size={17}
+                  className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                />
               </Link>
-
             </div>
 
-
-            {/* VISUAL */}
-            <div className="relative min-h-[320px] overflow-hidden lg:min-h-[420px]">
-
+            {/* FEATURED VISUAL */}
+            <div className="relative min-h-[320px] overflow-hidden lg:min-h-[460px]">
               <div
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-105"
                 style={{
@@ -159,197 +143,81 @@ const ServicesSection = () => {
                 }}
               />
 
-              <div className="absolute inset-0 bg-gradient-to-r from-[#071A2F] via-[#071A2F]/20 to-transparent lg:bg-gradient-to-r" />
-
+              <div className="absolute inset-0 bg-gradient-to-r from-[#071A2F]/60 via-[#071A2F]/20 to-transparent" />
             </div>
-
           </div>
-
         </div>
 
+        {/* FOUR SELECTED SUPPORTING SERVICES */}
+        <div>
+          <div className="mb-7">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#C9A227]">
+              Supporting Services
+            </p>
 
-        {/* =====================================================
-            OTHER SERVICES
-        ====================================================== */}
+            <h3 className="mt-2 text-2xl font-bold text-[#071A2F] sm:text-3xl">
+              Essential support for every shipment.
+            </h3>
+          </div>
 
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-
-          {sortedServices
-            .filter((service) => service.title !== "Air Freight")
-            .map((service, index) => {
-
+          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+            {supportingServices.map((service, index) => {
               const Icon = service.icon;
 
               return (
                 <Link
                   key={service.title}
                   to="/services"
-                  className="
-                    group
-                    relative
-                    overflow-hidden
-                    rounded-2xl
-                    border
-                    border-slate-200
-                    bg-white
-                    p-8
-                    transition-all
-                    duration-500
-                    hover:-translate-y-2
-                    hover:border-[#071A2F]
-                    hover:bg-[#071A2F]
-                    hover:shadow-2xl
-                  "
+                  className="group relative overflow-hidden rounded-xl border border-slate-200 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#C9A227] hover:bg-[#071A2F] hover:shadow-lg"
                 >
-
-                  {/* GOLD TOP BORDER */}
-                  <div
-                    className="
-                      absolute
-                      left-0
-                      top-0
-                      h-1
-                      w-0
-                      bg-[#C9A227]
-                      transition-all
-                      duration-500
-                      group-hover:w-full
-                    "
-                  />
-
-
                   {/* TOP ROW */}
                   <div className="flex items-center justify-between">
-
-                    <span
-                      className="
-                        text-[11px]
-                        font-bold
-                        tracking-[0.3em]
-                        text-slate-300
-                        transition-colors
-                        duration-300
-                        group-hover:text-[#C9A227]
-                      "
-                    >
-                      {String(index + 2).padStart(2, "0")}
+                    <span className="text-[10px] font-bold tracking-[0.25em] text-slate-400 transition-colors group-hover:text-[#C9A227]">
+                      {String(index + 1).padStart(2, "0")}
                     </span>
 
-
-                    <div
-                      className="
-                        flex
-                        h-12
-                        w-12
-                        items-center
-                        justify-center
-                        rounded-full
-                        bg-[#C9A227]/10
-                        transition-all
-                        duration-300
-                        group-hover:bg-[#C9A227]/20
-                      "
-                    >
-
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#C9A227]/10 transition-colors group-hover:bg-[#C9A227]/20">
                       <Icon
-                        size={22}
-                        strokeWidth={1.5}
+                        size={19}
+                        strokeWidth={1.6}
                         className="text-[#C9A227]"
                       />
-
                     </div>
-
                   </div>
 
-
                   {/* CATEGORY */}
-                  <p
-                    className="
-                      mt-10
-                      text-[11px]
-                      font-bold
-                      uppercase
-                      tracking-[0.25em]
-                      text-[#C9A227]
-                    "
-                  >
+                  <p className="mt-5 text-[10px] font-bold uppercase tracking-[0.16em] text-[#C9A227]">
                     {service.shortTitle}
                   </p>
 
-
                   {/* TITLE */}
-                  <h3
-                    className="
-                      mt-4
-                      text-2xl
-                      font-bold
-                      leading-tight
-                      text-[#071A2F]
-                      transition-colors
-                      duration-300
-                      group-hover:text-white
-                    "
-                  >
+                  <h4 className="mt-2 text-lg font-bold leading-snug text-[#071A2F] transition-colors group-hover:text-white">
                     {service.title}
-                  </h3>
-
+                  </h4>
 
                   {/* DESCRIPTION */}
-                  <p
-                    className="
-                      mt-5
-                      text-sm
-                      leading-7
-                      text-slate-500
-                      transition-colors
-                      duration-300
-                      group-hover:text-white/65
-                    "
-                  >
+                  <p className="mt-3 text-xs leading-6 text-slate-500 transition-colors group-hover:text-white/65">
                     {service.description}
                   </p>
 
-
                   {/* CTA */}
-                  <div className="mt-10 flex items-center justify-between">
-
-                    <span
-                      className="
-                        text-xs
-                        font-bold
-                        uppercase
-                        tracking-[0.2em]
-                        text-slate-400
-                        transition-colors
-                        duration-300
-                        group-hover:text-white/60
-                      "
-                    >
+                  <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-3 transition-colors group-hover:border-white/10">
+                    <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-slate-400 group-hover:text-white/60">
                       Learn More
                     </span>
 
                     <ArrowUpRight
-                      size={18}
-                      className="
-                        text-slate-300
-                        transition-all
-                        duration-300
-                        group-hover:text-[#C9A227]
-                        group-hover:-translate-y-1
-                        group-hover:translate-x-1
-                      "
+                      size={16}
+                      className="text-slate-400 transition-all group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-[#C9A227]"
                     />
-
                   </div>
-
                 </Link>
               );
             })}
-
+          </div>
         </div>
 
       </div>
-
     </section>
   );
 };

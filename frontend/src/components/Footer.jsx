@@ -1,6 +1,6 @@
 
 import {
-  ArrowUpRight,
+  ArrowRight,
   Mail,
   MapPin,
   Phone,
@@ -8,7 +8,7 @@ import {
 
 import { Link } from "react-router-dom";
 
-import logo from "../assets/logo.jpeg";
+import logo from "../assets/logo.jpg";
 
 const Footer = () => {
   return (
