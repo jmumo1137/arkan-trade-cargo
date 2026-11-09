@@ -1,3 +1,4 @@
+
 import {
   ArrowRight,
   Globe2,
@@ -6,26 +7,11 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-[#04111F]">
+    <section className="relative isolate overflow-hidden bg-[#04111F]">
 
-      {/* =========================================
-          BACKGROUND IMAGE
-      ========================================= */}
+      {/* BACKGROUND IMAGE */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
@@ -34,193 +20,140 @@ const Hero = () => {
         }}
       />
 
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-[#04111F]/60" />
+      {/* OVERLAYS */}
+      <div className="absolute inset-0 bg-[#04111F]/65" />
 
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#04111F]/50 via-[#071A2F]/40 to-[#04111F]/90" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#04111F]/60 via-[#071A2F]/55 to-[#04111F]/95" />
 
-      {/* =========================================
-          HERO CONTENT
-      ========================================= */}
-      <div className="relative z-10 flex min-h-[800px] items-center px-4 pt-20 pb-32 sm:px-6 lg:px-8">
+      {/* HERO CONTENT */}
+      <div className="relative z-10 flex min-h-[780px] items-center py-16 sm:py-20 lg:min-h-[calc(100svh-5rem)] lg:py-16">
 
         <div className="arkan-container w-full">
 
           <div className="mx-auto max-w-6xl text-center">
 
-            {/* Top Label */}
+            {/* TOP LABEL */}
             <div className="mb-6 flex items-center justify-center gap-4">
+              <span className="h-px w-10 bg-[#C9A227]" />
 
-              <span className="h-px w-12 bg-[#C9A227]" />
-
-              <span className="text-xs font-bold uppercase tracking-[0.35em] text-[#D4AF37]">
-                Kenya's Air Cargo Specialists
+              <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#D4AF37] sm:tracking-[0.35em]">
+                Kenya's Air Cargo & Meat Export Specialists
               </span>
 
-              <span className="h-px w-12 bg-[#C9A227]" />
-
+              <span className="h-px w-10 bg-[#C9A227]" />
             </div>
 
-            {/* Speed Badge */}
-            <div className="mb-8 inline-flex items-center rounded-full border border-[#D4AF37]/30 bg-[#D4AF37]/10 px-5 py-2 text-sm font-medium text-[#D4AF37] backdrop-blur-sm">
-              ✈ Fast International Cargo Movement
+            {/* BADGE */}
+            <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/30 bg-[#D4AF37]/10 px-5 py-2 text-sm font-medium text-[#D4AF37] backdrop-blur-sm">
+              <Plane size={16} />
+              International Air Freight Solutions
             </div>
 
-            {/* Company Name */}
-            <div className="mb-5">
-
+            {/* COMPANY BRANDING */}
+            <div className="mb-6">
               <p className="text-lg font-bold uppercase tracking-[0.5em] text-white">
                 ARKAN
               </p>
 
-              <p className="mt-2 text-sm uppercase tracking-[0.25em] text-[#D4AF37]">
-                Trade Cargo & Freight Solutions
+              <p className="mt-2 text-xs uppercase tracking-[0.2em] text-[#D4AF37] sm:text-sm sm:tracking-[0.3em]">
+                Trade Cargo & Freight Solutions Ltd
               </p>
-
             </div>
 
-            {/* Main Heading */}
-            <h1 className="text-5xl font-bold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl xl:text-8xl">
-              Air Cargo &
+            {/* MAIN HEADING */}
+            <h1 className="text-4xl font-bold leading-[1.12] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
+              Fresh & Chilled
               <span className="block text-[#D4AF37]">
-                Agricultural Exports
+                Meat Exports
+              </span>
+              <span className="mt-2 block text-2xl font-semibold text-white/90 sm:text-3xl lg:text-4xl">
+                Across Global Markets
               </span>
             </h1>
 
-            {/* Description */}
-            <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-white/80">
-              Specialists in fresh chilled meat exports, flowers,
-              herbs, vegetables, pets and general cargo. We provide
-              reliable air freight solutions connecting Kenya to
-              international markets with speed, care and professionalism.
+            {/* DESCRIPTION */}
+            <p className="mx-auto mt-7 max-w-3xl text-base leading-8 text-white/80 sm:text-lg">
+              Connecting Kenya's meat exporters to international
+              markets through reliable air freight, temperature-conscious
+              cargo handling and professional export logistics.
+              We also support flower, horticultural and general cargo exports.
             </p>
 
-            {/* Buttons */}
-            <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            {/* CTA BUTTONS */}
+            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
 
               <Link
                 to="/quote"
-                className="
-                  inline-flex
-                  items-center
-                  gap-2
-                  rounded-full
-                  bg-[#C9A227]
-                  px-8
-                  py-4
-                  font-semibold
-                  text-[#04111F]
-                  transition-all
-                  duration-300
-                  hover:-translate-y-1
-                  hover:bg-[#E3C766]
-                "
+                className="group inline-flex w-full items-center justify-center gap-3 rounded-full border border-[#C9A227] bg-[#C9A227] px-8 py-4 font-bold text-[#04111F] shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-transparent hover:text-[#D4AF37] hover:shadow-[0_0_20px_rgba(201,162,39,0.35)] sm:w-auto"
               >
                 Request a Quote
-                <ArrowRight size={18} />
+                <ArrowRight
+                  size={18}
+                  className="transition-transform duration-300 group-hover:translate-x-1"
+                />
               </Link>
 
               <Link
                 to="/services"
-                className="
-                  inline-flex
-                  items-center
-                  rounded-full
-                  border
-                  border-white/25
-                  px-8
-                  py-4
-                  font-semibold
-                  text-white
-                  transition-all
-                  duration-300
-                  hover:bg-white/10
-                "
+                className="inline-flex w-full items-center justify-center rounded-full border border-white/30 bg-white/5 px-8 py-4 font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:border-[#C9A227] hover:bg-white/10 sm:w-auto"
               >
                 Explore Our Services
               </Link>
 
             </div>
 
-            {/* =========================================
-    BOTTOM TRUST INDICATORS
-========================================= */}
-<div className="mx-auto mt-20 max-w-5xl">
+            {/* TRUST INDICATORS */}
+            <div className="mx-auto mt-14 grid max-w-5xl grid-cols-1 gap-4 border-t border-white/15 pt-8 sm:grid-cols-3 sm:gap-8">
 
-  <div className="flex flex-wrap items-center justify-center gap-x-16 gap-y-8">
+              {/* AIR CARGO */}
+              <div className="flex items-center justify-center gap-3 rounded-xl border border-white/10 bg-white/5 p-4 text-left backdrop-blur-sm">
+                <Plane size={25} className="shrink-0 text-[#C9A227]" />
 
-    {/* Air Cargo */}
-    <div className="flex items-center gap-3 text-left">
+                <div>
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-white/50">
+                    Speciality
+                  </p>
+                  <p className="mt-1 text-sm font-semibold text-white">
+                    Air Cargo Solutions
+                  </p>
+                </div>
+              </div>
 
-      <Plane
-        size={22}
-        className="shrink-0 text-[#C9A227]"
-      />
+              {/* MEAT EXPORT */}
+              <div className="flex items-center justify-center gap-3 rounded-xl border border-[#C9A227]/25 bg-[#C9A227]/10 p-4 text-left backdrop-blur-sm">
+                <Package size={25} className="shrink-0 text-[#C9A227]" />
 
-      <div>
-        <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-white/45">
-          Specialty
-        </p>
+                <div>
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-white/50">
+                    Primary Focus
+                  </p>
+                  <p className="mt-1 text-sm font-semibold text-white">
+                    Fresh Meat Exports
+                  </p>
+                </div>
+              </div>
 
-        <p className="mt-1 text-sm font-semibold text-white">
-          Air Cargo Solutions
-        </p>
-      </div>
+              {/* GLOBAL REACH */}
+              <div className="flex items-center justify-center gap-3 rounded-xl border border-white/10 bg-white/5 p-4 text-left backdrop-blur-sm">
+                <Globe2 size={25} className="shrink-0 text-[#C9A227]" />
 
-    </div>
+                <div>
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-white/50">
+                    Reach
+                  </p>
+                  <p className="mt-1 text-sm font-semibold text-white">
+                    Global Export Markets
+                  </p>
+                </div>
+              </div>
 
-    {/* Chilled Meat */}
-    <div className="flex items-center gap-3 text-left">
-
-      <Package
-        size={22}
-        className="shrink-0 text-[#C9A227]"
-      />
-
-      <div>
-        <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-white/45">
-          Export Focus
-        </p>
-
-        <p className="mt-1 text-sm font-semibold text-white">
-          Chilled Meat Exports
-        </p>
-      </div>
-
-    </div>
-
-    {/* Global Markets */}
-    <div className="flex items-center gap-3 text-left">
-
-      <Globe2
-        size={22}
-        className="shrink-0 text-[#C9A227]"
-      />
-
-      <div>
-        <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-white/45">
-          Reach
-        </p>
-
-        <p className="mt-1 text-sm font-semibold text-white">
-          Global Export Markets
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
+            </div>
 
           </div>
-
         </div>
-
       </div>
 
-      {/* Bottom Accent */}
+      {/* BOTTOM ACCENT */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#C9A227]" />
 
     </section>
